@@ -31,10 +31,39 @@
             "tsConfig": "projects/fruit/tsconfig.spec.json",
             "karmaConfig": "projects/fruit/karma.conf.js"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/fruit/.storybook",
+            "browserTarget": "fruit:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/fruit"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/fruit/.storybook",
+            "browserTarget": "fruit:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/fruit"
+            ],
+            "outputDir": "dist/storybook/fruit"
+          }
         }
       }
     },
-
     "animal": {
       "projectType": "library",
       "root": "projects/animal",
@@ -66,7 +95,6 @@
         }
       }
     },
-
     "car": {
       "projectType": "library",
       "root": "projects/car",
