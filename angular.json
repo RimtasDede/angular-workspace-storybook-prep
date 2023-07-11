@@ -123,6 +123,36 @@
             "tsConfig": "projects/car/tsconfig.spec.json",
             "karmaConfig": "projects/car/karma.conf.js"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/car/.storybook",
+            "browserTarget": "car:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/car"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/car/.storybook",
+            "browserTarget": "car:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/car"
+            ],
+            "outputDir": "dist/storybook/car"
+          }
         }
       }
     }
