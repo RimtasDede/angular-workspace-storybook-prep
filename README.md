@@ -8,14 +8,24 @@ First time setup Storybook for Angular Workspace can be pretty complicated. This
 npx sb init
 ```
 
-Choose project and say that you want have [Compodoc](https://compodoc.app) also. Required packages will be installed, .storybook directory will be added in to your project directory, 
+Choose project and say that you want have [Compodoc](https://compodoc.app) also. Required packages will be installed, .storybook directory will be added in to your project directory, few stories examples will be added into project src directory. 
 
 Two Angular builder targets will be added to your choosen project: `storybook` and `build-storybook`.
 
-```sh
-# serve storybook and open it in your browser
-ng run {project}:storybok
+> To `.gitignore` add `/projects/*/documentation.json` line if dont want add Compodoc generated documentation file into git repository.
 
-# build storybook into /dist/storybook/{project}
+# Basic usage
+
+Open storybook in browser
+
+```sh
+ng run {project}:storybook
+```
+
+Build storybook into /dist/storybook/{project}
+
+```sh
 ng run {project}:build-storybook
 ```
+
+> Build also can be served by running `npx http-server dist/storybook/{project}`. In browser open http://localhost:8080
