@@ -7,6 +7,17 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
+    "paths": {
+      "animal": [
+        "dist/animal"
+      ],
+      "car": [
+        "dist/car"
+      ],
+      "fruit": [
+        "dist/fruit"
+      ]
+    },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
